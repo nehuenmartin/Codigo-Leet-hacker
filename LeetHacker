@@ -1,0 +1,14 @@
+def leet_speak(text):
+    leet_dict = {
+        "a": "4", "e": "3", "g": "6", "i": "1", "o": "0", "s": "5", "t": "7" # ("a": "4"), ("e": "3") se entiende mejor
+    }
+    leet_text = ""
+    for char in text:
+        if char.lower() in leet_dict:
+            leet_text += leet_dict[char.lower()]
+        else:
+            leet_text += char
+    return leet_text
+
+text = "Hola mundo, soy nehuen y este es el idioma leet, nuestro cerebro es lo suficientemente inteligente para entenderlo"
+print(leet_speak(text)) # Imprime "H0l4 mUnd0"
